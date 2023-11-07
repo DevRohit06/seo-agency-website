@@ -1,0 +1,35 @@
+---
+import { Features } from "../utils/Info.js";
+---
+
+<section class="w-5/6 mx-auto mt-48 mb-28">
+  <div class="text-center">
+    <span class="rounded-full text-white text-center px-6 py-1 bg-primary"
+      >Our Services</span
+    >
+    <h1 class="pt-4 pb-2 text-3xl font-semibold">
+      Our Comprehensive SEO Services
+    </h1>
+    <p class="text-gray-500">
+      Our services cover every aspect of SEO to ensure your website's success
+    </p>
+  </div>
+  <div class="xl:w-5/6 mx-auto mt-8 grid lg:grid-cols-2 gap-4 sm:grid-cols-1 md:grid-cols-2">
+    {
+      Features.map((item) => {
+        return (
+          <div
+          class="bg-slate-100 p-4 xl:text-start sm:text-center rounded-xl xl:flex-row xl:justify-center flex gap-8 sm:items-center flex-col items-center justify-center ">
+            <div class="flex ">
+              <img class=" rounded-xl" src={item.image} width="80" alt={item.name} />
+            </div>
+            <div class="xl:text-start text-center">
+              <h1 class="text-xl font-semibold">{item.title}</h1>
+              <p class="text-sm">{item.description}</p>
+            </div>
+          </div>
+        );
+      })
+    }
+  </div>
+</section>
