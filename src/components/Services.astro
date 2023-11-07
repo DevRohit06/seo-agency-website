@@ -18,7 +18,7 @@ import { Features } from "../utils/Info.js";
     {
       Features.map((item) => {
         return (
-          <div
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom"
           class="bg-slate-100 p-4 xl:text-start sm:text-center rounded-xl xl:flex-row xl:justify-center flex gap-8 sm:items-center flex-col items-center justify-center ">
             <div class="flex ">
               <img class=" rounded-xl" src={item.image} width="80" alt={item.name} />
